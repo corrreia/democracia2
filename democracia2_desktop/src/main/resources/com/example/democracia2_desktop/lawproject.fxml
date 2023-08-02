@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.democracia2_desktop.control.LawProjectController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <VBox alignment="CENTER" layoutX="8.0" layoutY="124.0" prefHeight="224.0" prefWidth="582.0" spacing="10">
+        <HBox alignment="CENTER_LEFT">
+            <Label styleClass="law-proposal-label" text="Projeto:" />
+            <Label fx:id="titleLabel" styleClass="law-project-title" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT">
+            <Label styleClass="law-proposal-label" text="Descrição:" />
+            <Label fx:id="descriptionLabel" styleClass="law-project-description" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT">
+            <Label styleClass="law-proposal-label" text="Delegado:" />
+            <Label fx:id="signCountLabel" styleClass="sign-count" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT">
+            <Label styleClass="law-proposal-label" text="Tema:" />
+            <Label fx:id="themeLabel" styleClass="theme" />
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT">
+            <Label styleClass="law-proposal-label" text="Data de expiração:" />
+            <Label fx:id="expirationDateLabel" styleClass="expiration-date" />
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Button fx:id="addSignButton" onAction="#addSign" text="Assinar" />
+        </HBox>
+    </VBox>
+   <Label layoutX="224.0" layoutY="14.0" text="Projeto de Lei">
+      <font>
+         <Font name="Verdana" size="22.0" />
+      </font>
+   </Label>
+</AnchorPane>

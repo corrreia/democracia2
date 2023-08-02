@@ -1,0 +1,24 @@
+.law-proposal-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+    -fx-font-family: Verdana;
+}
+
+.law-proposal-title {
+    -fx-font-size: 12px;
+    -fx-text-fill: #000000;
+    -fx-font-family: Verdana;
+}
+
+.law-proposal-description {
+    -fx-font-size: 12px;
+    -fx-text-fill: #000000;
+    -fx-font-family: Verdana;
+}
+
+.delegate-name {
+    -fx-font-size: 12px;
+    -fx-text-fill: #000000;
+    -fx-font-family: Verdana;
+}

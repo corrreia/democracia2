@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Law Project Proposal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input[type="text"],
+        textarea,
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            background-color: #4285F4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #3367D6;
+        }
+        
+        .theme-dropdown {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        
+        .delegate-name {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #333;
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>New Law Project</h1>
+    <form action="/add-lawproject" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="expiration">Expiration Date:</label><br>
+        <input type="datetime-local" id="expiration" name="expiration" required><br><br>
+        
+        <label for="theme">Theme:</label><br>
+        <select id="theme" name="theme" class="theme-dropdown" required>
+            <option th:each="theme : ${themes}" th:value="${theme.name}" th:text="${theme.name}"></option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

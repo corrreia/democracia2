@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="380.0" prefWidth="404.0" spacing="10" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.democracia2_desktop.control.LoginController">
+    <Label text="Login">
+      <font>
+         <Font name="Verdana" size="44.0" />
+      </font></Label>
+   <Label prefHeight="15.0" prefWidth="392.0" text="Government ID:">
+      <font>
+         <Font name="Verdana" size="12.0" />
+      </font>
+   </Label>
+    <TextField fx:id="govermentIdTextField" prefHeight="26.0" prefWidth="378.0" promptText="Government ID" />
+    <RadioButton fx:id="citizenRadioButton" prefHeight="18.0" prefWidth="390.0" text="Citizen" />
+    <RadioButton fx:id="delegateRadioButton" prefHeight="18.0" prefWidth="392.0" text="Delegate" />
+    <Button onAction="#goToMainController" style="-fx-background-color: blue; -fx-text-fill: white;" text="Login" />
+</VBox>
